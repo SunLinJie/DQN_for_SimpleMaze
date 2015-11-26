@@ -36,7 +36,7 @@ and installation instructions can be found in
 http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux
 
 
-To train DQN on Atari games, the following components must be installed:
+To train DQN on Simple maze, the following components must be installed:
 * LuaJIT and Torch 7.0
 * nngraph
 * Xitari
@@ -56,20 +56,19 @@ libpng-dev, ncurses-dev, imagemagick, unzip
 Training DQN on Atari games
 ---------------------------
 
-Prior to running DQN on a game, you should copy its ROM in the 'roms' subdirectory.
-It should then be sufficient to run the script
+Prior to running DQN on a game.It should then be sufficient to run the script
 
-    ./run_cpu <game name>
+    ./run_cpu <maze>
 
 Or, if GPU support is enabled,
 
-    ./run_gpu <game name>
+    ./run_gpu <maze>
 
 
 Note: On a system with more than one GPU, DQN training can be launched on a
 specified GPU by setting the environment variable GPU_ID, e.g. by
 
-    GPU_ID=2 ./run_gpu <game name>
+    GPU_ID=2 ./run_gpu <maze>
 
 If GPU_ID is not specified, the first available GPU (ID 0) will be used by default.
 
@@ -82,5 +81,5 @@ to stdout by setting 'prog_freq' to a different value.
 
 
 * uses `qtlua` and `image.display()` to show game screen while training,
- * `plot_results <game>` script to plot history recorded in model file,
- * `test_gpu <game>` and `test_cpu <game>` scripts to play one session and record screens in animated GIF. These also record actions, Q-values and rewards in CSV file. 
+ * `plot_results <maze>` script to plot history recorded in model file,
+ * `test_gpu <maze>` and `test_cpu <maze>` scripts to play one session and record screens in animated GIF. These also record actions, Q-values and rewards in CSV file. 
