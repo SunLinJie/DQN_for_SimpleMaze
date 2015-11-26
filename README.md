@@ -81,5 +81,5 @@ to stdout by setting 'prog_freq' to a different value.
 
 
 * uses `qtlua` and `image.display()` to show game screen while training,
- * `plot_results <maze>` script to plot history recorded in model file,
+ * `qlua plot_results.lua` script to plot history recorded in model file,
  * `test_gpu <maze>` and `test_cpu <maze>` scripts to play one session and record screens in animated GIF. These also record actions, Q-values and rewards in CSV file. 
